@@ -26,5 +26,5 @@ jobs:
         env:
           VERSION: ${{ matrix.jlversion }}
         run: |
-          export PATH="/home/runner/.local/bin:$PATH"
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
           bash -e ci-test.sh
